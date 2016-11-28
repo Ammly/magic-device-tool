@@ -34,7 +34,51 @@ then
   echo "Downloading AOSP 7.1 Nougat.."
   echo ""
   sleep 1
-  wget -c --quiet --show-progress --tries=10 https://qc3.androidfilehost.com/dl/Afuq8EQZYy6v-JrN9JxdKA/1480223760/385035244224401091/aosp_hammerhead-7.1-nougat-20161124.zip
+  one=$(wget -c --quiet --show-progress --tries=10 http://tx2.androidfilehost.com/dl/E2CWds7grXLm3KrdR2zelw/1480566537/385035244224401091/aosp_hammerhead-7.1-nougat-20161124.zip)
+  if [[ $one != 0 ]]; then
+      echo "Error downloading file. Trying another server."
+      sleep 1
+
+      two=$(wget -c --quiet --show-progress --tries=10 https://de1.androidfilehost.com/dl/pBMf2gaTDYvQ5VAk1ajjig/1480566532/385035244224401091/aosp_hammerhead-7.1-nougat-20161124.zip)
+      if [[ $two != 0 ]]; then
+          echo "Error downloading file. Trying another server." 
+          sleep 1
+
+          three=$(wget -c --quiet --show-progress --tries=10 https://va1.androidfilehost.com/dl/E2CWds7grXLm3KrdR2zelw/1480566537/385035244224401091/aosp_hammerhead-7.1-nougat-20161124.zip)
+          if [[ $three != 0 ]]; then
+              echo "Error downloading file. Trying another server." 
+              sleep 1
+
+              four=$(wget -c --quiet --show-progress --tries=10 http://qc4.androidfilehost.com/dl/H65mFP55ekUIdRqWpm54-Q/1480566535/385035244224401091/aosp_hammerhead-7.1-nougat-20161124.zip)
+              if [[ $four != 0 ]]; then
+                  echo "Error downloading file. Trying another server." 
+                  sleep 1
+
+                  five=$(wget -c --quiet --show-progress --tries=10 https://tx1.androidfilehost.com/dl/wHmH_IBQlIX0j0xw7Azk0w/1480566536/385035244224401091/aosp_hammerhead-7.1-nougat-20161124.zip)
+                  if [[ $five != 0 ]]; then
+                      echo "Error downloading file. Exiting..." 
+                      exit
+                      sleep 1
+                  else
+                      echo "Success. Cont"
+                      sleep 1
+                  fi    
+              else
+                  echo "Success. Cont"
+                  sleep 1
+              fi   
+          else
+              echo "Success. Cont"
+              sleep 1
+          fi   
+      else
+          echo "Success. Cont"
+          sleep 1
+      fi  
+  else
+      echo "Success. Cont"
+      sleep 1
+  fi
   echo ""
   echo "Downloading Open Gapps.."
   echo ""
