@@ -22,8 +22,8 @@ echo "[4]  Install Cyanogenmod 13 without Gapps"
 echo "[5]  Install Maru OS"
 echo "[6]  Install Maru OS without Gapps"
 echo "[7]  Install Sailfish OS"
-echo "[8]  Install AOSP 7.1 Nougat (Rom By @Santhosh M)"
-echo "[9]  Install AOSP 7.1 Nougat without Gapps (Rom By @Santhosh M)"
+echo "[8]  Install Dirty Unicorns Nougat 7.0"
+echo "[9]  Install Dirty Unicorns Nougat 7.0 without Gapps"
 echo "[10]  Install Factory Image"
 echo "[11]  Install TWRP recovery"
 echo "[12] Back Up your Android device"
@@ -48,9 +48,9 @@ elif [ "$option" = "6" ]; then
 elif [ "$option" = "7" ]; then
 . ./devices/nexus5/android/sailfishos.sh
 elif [ "$option" = "8" ]; then
-. ./devices/nexus5/android/aospnougat.sh
+. ./devices/nexus5/android/duhammerheadnougat.sh
 elif [ "$option" = "9" ]; then
-. ./devices/nexus5/android/aospnougatwogapps.sh
+. ./devices/nexus5/android/duhammerheadnougatwogapps.sh
 elif [ "$option" = "10" ]; then
 . ./devices/nexus5/android/factoryimage.sh
 elif [ "$option" = "11" ]; then
